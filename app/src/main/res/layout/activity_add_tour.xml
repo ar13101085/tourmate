@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Tour"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/tripNameET"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:inputType="textCapWords"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/custom_text_background"
+                android:hint=" Tour Name"/>
+            <EditText
+                android:inputType="textCapWords"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:id="@+id/tripStartingLocationET"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/custom_text_background"
+                android:hint="Tour Starting Location"/>
+            <EditText
+                android:inputType="textCapWords"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:id="@+id/tripDestinationET"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/custom_text_background"
+                android:hint="Tour Destination Location"/>
+            <EditText
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:id="@+id/tripBudgetET"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/custom_text_background"
+                android:hint="Tour Budget"/>
+            <Button
+                android:imeOptions="actionDone"
+                android:textAlignment="textStart"
+                android:id="@+id/tripStartingDateET"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/custom_text_background"
+                android:hint="Tour Start Date"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="17dp"/>
+            <Button
+                android:imeOptions="actionDone"
+               android:textAlignment="textStart"
+                android:id="@+id/tripEndDateET"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:inputType="textEmailAddress"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/custom_text_background"
+                android:hint="Tour End Date"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="17dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:imeOptions="actionNone"
+                    android:id="@+id/cancelBtn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:layout_marginTop="10dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/cancel_button"
+                    android:textStyle="bold"
+
+                    android:layout_margin="10dp"
+                    android:textColor="@color/white"/>
+                <Button
+                    android:imeOptions="actionDone"
+                    android:id="@+id/addBtn"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Add Tour"
+                    android:layout_marginTop="10dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/custom_button"
+                    android:textStyle="bold"
+                    android:onClick="addTour"
+
+                    android:layout_margin="10dp"
+                    android:textColor="@color/white"/>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+</layout>

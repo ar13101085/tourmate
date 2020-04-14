@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/tripNameET"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:inputType="textCapWords"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/custom_text_background"
+                android:hint=" Tour Name"/>
+            <EditText
+                android:inputType="textCapWords"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:id="@+id/tripStartingLocationET"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/custom_text_background"
+                android:hint="Tour Starting Location"/>
+            <EditText
+                android:inputType="textCapWords"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:id="@+id/tripDestinationET"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/custom_text_background"
+                android:hint="Tour Destination Location"/>
+            <EditText
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:id="@+id/tripStartingDateET"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/custom_text_background"
+                android:hint="Tour Starting Date"/>
+            <EditText
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:id="@+id/tripEndDateET"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:inputType="textEmailAddress"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/custom_text_background"
+                android:hint="Tour End Date"/>
+            <EditText
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:id="@+id/tripBudgetET"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:inputType="number"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/custom_text_background"
+                android:hint="Tour Budget"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:imeOptions="actionNone"
+                    android:id="@+id/cancelBtn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:layout_marginTop="10dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/cancel_button"
+                    android:textStyle="bold"
+
+                    android:layout_margin="10dp"
+                    android:textColor="@color/white"/>
+                <Button
+                    android:imeOptions="actionDone"
+                    android:id="@+id/addBtn"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Add Tour"
+                    android:layout_marginTop="10dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/custom_button"
+                    android:textStyle="bold"
+
+                    android:layout_margin="10dp"
+                    android:textColor="@color/white"/>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+</layout>

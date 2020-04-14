@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/drawer"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:onClick="back"
+                    android:id="@+id/backBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_keyboard_backspace_white_24dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tours"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:gravity="center"/>
+
+
+            </LinearLayout>
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                app:duration="1500"
+                >
+
+                <!-- Adding 7 rows of placeholders -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <include layout="@layout/data_placeholder_layout" />
+                    <include layout="@layout/data_placeholder_layout" />
+                    <include layout="@layout/data_placeholder_layout" />
+                    <include layout="@layout/data_placeholder_layout" />
+                    <include layout="@layout/data_placeholder_layout" />
+                    <include layout="@layout/data_placeholder_layout" />
+                    <include layout="@layout/data_placeholder_layout" />
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?actionBarSize"
+                android:layout_margin="5dp"
+                android:id="@+id/tourRV"/>
+            <TextView
+                android:id="@+id/demoTextTv"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:text="@string/add_tour"/>
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_add_black_24dp"
+                android:id="@+id/addtourFAB"
+                android:onClick="addTour"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_margin="5dp"
+                />
+        </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+</layout>

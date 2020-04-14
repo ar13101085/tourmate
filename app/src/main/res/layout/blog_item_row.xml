@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout >
+    <androidx.cardview.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        app:cardCornerRadius="6dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/container">
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+            <TextView
+                android:id="@+id/mainText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:padding="10dp"
+                android:text="This is a long text"/>
+
+            <TextView
+                android:id="@+id/dateText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_below="@id/mainText"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:text="12-12-2012"
+                android:gravity="right|center_vertical"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>
